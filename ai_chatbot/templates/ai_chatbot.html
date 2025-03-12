@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+</form>
+
+<div class="container mt-4">
+    <h2>AI Chatbot</h2>
+    <div id="chatbot-container">
+        <div id="chat-box">
+            <div id="chat-messages"></div>
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button onclick="sendMessage()" id="send-btn">Send</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

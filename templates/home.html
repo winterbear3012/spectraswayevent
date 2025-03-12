@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero bg-primary ">
+    <div class="container">
+        <h1>Welcome to Spectrasway Event</h1>
+        <p>Plan Events Smarter with AI!</p>
+        <a href="/ai_generator" class="btn btn-light btn-lg">Generate Your Event</a>
+    </div>
+</section>
+
+<!-- About/Introduction -->
+<section class="about ">
+    <div class="container text-center">
+        <h2>About Us</h2>
+        <p>We leverage AI to help you create unique events effortlessly.</p>
+    </div>
+</section>
+
+<!-- Services/Features -->
+<section class="features">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Features</h2>&nbsp; &nbsp;
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <h4>🎉 AI Event Generator</h4>
+                <p>Generate event ideas and details with AI.</p>
+                <a href="/ai_generator" class="btn btn-primary">Try Now</a>
+            </div>
+            <div class="col-md-4 text-center">
+                <h4>💬 AI Chatbot</h4>
+                <p>Ask questions and get instant event planning tips.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <h4>👥 Community Forum</h4>
+                <p>Engage with other event planners and share ideas.</p>
+                <a href="/forum" class="btn btn-primary">Join Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Call-to-Action -->
+<section class="cta bg-primary  text-center py-5">
+    <div class="container">
+        <h2>Ready to Plan Your Next Event?</h2> 
+        <a href="/ai_generator" class="btn btn-light btn-lg">Get Started</a>
+    </div>
+</section>
+
+{% endblock %}

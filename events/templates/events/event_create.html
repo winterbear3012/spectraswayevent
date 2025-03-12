@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% if messages %}
+    <div class="alert alert-success">
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Create an Event</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label class="form-label">Event Type</label>
+            {{ form.event_type }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            {{ form.description }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Date</label>
+            {{ form.date }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Venue Type</label>
+            {{ form.venue_type }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Attendees</label>
+            {{ form.attendees }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Theme</label>
+            {{ form.theme }}
+        </div>
+        <button type="submit" class="btn btn-primary">Create Event</button>
+    </form>
+</div>
+{% endblock %}
+

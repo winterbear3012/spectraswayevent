@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Upcoming Events{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center mb-4">Upcoming Events</h2>
+
+    <div class="row">
+        {% for event in events %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">{{ event.event_type }}</h5>
+                    <p class="card-text">{{ event.description|truncatewords:20 }}</p>
+                    <p><strong>Date:</strong> {{ event.date }}</p>
+                    <p><strong>Venue:</strong> {{ event.venue_type }}</p>
+                    <p><strong>Attendees:</strong> {{ event.attendees }}</p>
+                    <a href="{% url 'event_detail' event.id %}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center">No upcoming events available.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

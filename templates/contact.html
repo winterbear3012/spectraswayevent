@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<div class="container my-5 text-center">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need support, feel free to reach out to us.</p>
+    <ul class="list-unstyled">
+        <li><strong>Email:</strong> <a href="mailto:sandyr3012@gmail.com">sandyr3012@gmail.com</li>
+        <li><strong>Phone:</strong> <a href="tel:+91 8141502931"> +91 8141502931</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% if messages %}
+    <div class="alert alert-success">
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </div>
+{% endif %}
+
